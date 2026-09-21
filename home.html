@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Radwa Gamal | Backend Laravel Developer</title>
+    <link rel="icon" type="image/png" href="assets/images/logo-1.jpg">
+
+    <meta name="description" content="Portfolio of Radwa Gamal, a backend Laravel developer building RESTful APIs for web and mobile apps.">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css?v=3">
+
+    <!-- Fonts (style.css uses 'poppins') -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- scroll progress bar (animated by script.js) -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- header -->
+    <header class="header">
+        <a href="#" class="logo"><span>Radwa Gamal</span></a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="fa-solid fa-bars-staggered menu-icon" id="menu-icon"></i>
+        <a class="visit-btn" href="https://github.com/radwa-gamal30" target="_blank" rel="noopener">Visit GitHub</a>
+    </header>
+    <!-- header end -->
+
+    <!-- about -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <img src="assets/images/radwa.png" alt="Radwa Gamal">
+            <div class="info-box">
+                <div class="text">
+                    <h3>Hi, I'm</h3>
+                    <h1>Radwa Gamal</h1>
+                    <span id="typed-role" data-words="Backend Laravel Developer|RESTful APIs Developer|PHP &amp; MySQL Developer">Backend Laravel Developer</span>
+                </div>
+                <div class="btn-group">
+                    <div class="btn download-btn">
+                        <a target="_blank" rel="noopener" href="https://drive.google.com/file/d/1EooaAcwVll4ii3uKsR2LGDkjsDzXZPF6/view?usp=drive_link" style="text-decoration: none;">Download CV</a>
+                    </div>
+                    <div class="btn contact-btn">
+                        <!-- wa.me needs the international format: country code, no + and no leading 0 -->
+                        <a href="https://wa.me/201093395099" target="_blank" rel="noopener" style="text-decoration: none;">Contact</a>
+                    </div>
+                </div>
+                <div class="socials">
+                    <a href="https://github.com/radwa-gamal30" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github-alt"></i></a>
+                    <a href="https://www.linkedin.com/in/radwagamalmohamed" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about end -->
+
+    <!-- experience -->
+    <section id="experience" class="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="experience-info">
+            <div class="grid">
+                <div class="grid-card">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Backend Developer</span>
+                    <h3>Emcan Solutions — Jun 2025 to Feb 2026</h3>
+                    <p>Developed full-stack web applications using PHP/Laravel for backend logic,
+                       with front-end edits on HTML, CSS, and Bootstrap. Integrated JavaScript
+                       libraries to enhance UI functionality and collaborated directly with
+                       clients to define requirements and deliver tailored solutions.</p>
+                </div>
+                <div class="grid-card">
+                    <i class="fa-solid fa-file-code"></i>
+                    <span>Backend Developer</span>
+                    <h3>Blue Technology — Oct 2024 to Mar 2025</h3>
+                    <p>Specialized in PHP API development integrating with React-based web
+                       projects and Flutter mobile apps. Managed API endpoints for efficient
+                       data exchange and oversaw database operations (MySQL/NoSQL), including
+                       optimization for scalability and security.</p>
+                </div>
+                <div class="grid-card">
+                    <i class="fa-solid fa-laptop"></i>
+                    <span>Full Stack Web Development</span>
+                    <h3>ITI — Intensive Code Camp, 2024</h3>
+                    <p>4-month intensive training program focused on full-stack PHP development.
+                       Gained hands-on experience building responsive web applications and
+                       collaborated on team projects that strengthened problem-solving and
+                       coding skills.</p>
+                </div>
+            </div>
+            <img src="assets/images/radwa.png" alt="Radwa Gamal">
+        </div>
+    </section>
+    <!-- experience end -->
+
+    <!-- projects -->
+    <section id="projects" class="projects">
+        <h2 class="section-title">Recent Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="assets/images/nasscafe_logo.webp" alt="Nass Café logo" style="width: 100%; height: 100%;">
+                <h3>Nass Café</h3>
+                <p>Backend for a KSA café chain's Flutter ordering app — RESTful APIs (Laravel)
+                   for menu, cart, and delivery flow, with Foodics POS integration for
+                   real-time order and inventory sync.</p>
+                <div class="btn-group">
+                    <a class="btn" href="https://play.google.com/store/apps/details?id=com.emcan.nass&amp;pcampaignid=web_share" target="_blank" rel="noopener">Live Demo</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="assets/images/shinerider.webp" alt="Shine Rider" style="width: 100%; height: 100%;">
+                <h3>Shine Rider</h3>
+                <p>On-demand car cleaning app (iOS &amp; Android) — Laravel APIs for service/package
+                   booking and driver assignment, with live chat and real-time driver location
+                   tracking.</p>
+                <div class="btn-group">
+                    <a class="btn" href="https://www.shineriderbh.com" target="_blank" rel="noopener">Live Demo</a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="assets/images/mabrook.webp" alt="Mabrook" style="width: 100%; height: 100%;">
+                <h3>Mabrook</h3>
+                <p>Ceremony booking platform (iOS &amp; Android) connecting users with photographers,
+                   event halls, and related vendors. Built RESTful APIs and admin dashboard
+                   endpoints for vendor and booking management.</p>
+                <div class="btn-group">
+                    <a class="btn" href="https://apps.apple.com/app/mabrook/id6752712139" target="_blank" rel="noopener">Live Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- projects end -->
+
+    <!-- contact -->
+    <section id="contact" class="contact">
+        <div class="input-box">
+            <h2 class="section-title">Contact Me</h2>
+
+            <!--
+                No backend needed: the form is sent through Formspree (free plan available).
+                1. Create a form at https://formspree.io
+                2. Replace YOUR_FORM_ID below with the ID you get (e.g. xyzabcde)
+                Messages arrive in your email. script.js sends the form with fetch()
+                and shows the success/error toast without reloading the page.
+            -->
+            <form id="contact-form" action="https://formspree.io/f/xzezeaqv" method="POST">
+                <!-- honeypot: hides the form from simple spam bots -->
+                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none">
+
+                <div class="input">
+                    <input type="email" name="email" placeholder="example@email.com" required>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div class="input">
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <i class="fa-solid fa-hashtag"></i>
+                </div>
+
+                <div class="input">
+                    <textarea name="message" placeholder="Write your message..." rows="5" required></textarea>
+                    <i class="fa-solid fa-message"></i>
+                </div>
+
+                <button type="submit" class="btn" id="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <!-- contact end -->
+
+    <!-- toast messages are inserted here by script.js -->
+    <div id="toast-container"></div>
+
+    <!-- footer -->
+    <footer>
+        <ul>
+            <li>
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+        <p class="copyright">© All rights reserved | Radwa Gamal</p>
+    </footer>
+
+    <script src="script.js?v=3"></script>
+</body>
+</html>
