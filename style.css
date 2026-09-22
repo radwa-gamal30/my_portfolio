@@ -200,10 +200,10 @@ section{
 }
 .contact-me-quote{
     position: absolute;
-    top: -3.5rem;
+    top: -1.5rem;
     left: -2.5rem;
     font-family: Georgia, 'Times New Roman', serif;
-    font-size: 6rem;
+    font-size: 4rem;
     font-weight: 700;
     line-height: 1;
     background: linear-gradient(to right, rgb(0,157,255), rgb(255,0,255));
@@ -212,7 +212,7 @@ section{
     color: transparent;
     -webkit-text-fill-color: transparent;
     opacity: 0.5;
-    transform: rotate(-30deg);
+    transform: rotate(-55deg);
 }
 .about-me-lead{
     font-size: 2.1rem;
