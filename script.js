@@ -138,8 +138,11 @@ sections.forEach((section) => spy.observe(section));
 
 /* ========== Reveal on scroll ========== */
 if (!reduceMotion) {
+    // const targets = document.querySelectorAll(
+    //     '.section-title, .grid-card, .project-card, .experience-info > img, #contact-form, .about-me-card'
+    // );
     const targets = document.querySelectorAll(
-        '.section-title, .grid-card, .project-card, .experience-info > img, #contact-form'
+        '.section-title, .grid-card, .project-card, .experience-info > img, #contact-form, .about-me-quote, .about-me-lead, .about-me-text, .cta-lead, .cta-btn-link'
     );
 
     const reveal = new IntersectionObserver((entries, observer) => {
