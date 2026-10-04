@@ -334,6 +334,7 @@ color: white;
     cursor: pointer;
     border-radius: 3rem;
     transition: 0.3s ease-in-out;
+    min-height: 420px;
 }
 
 .project-card h3{
@@ -360,6 +361,11 @@ color: white;
     -webkit-line-clamp: 4;      /* أقصى عدد سطور قبل القص */
     -webkit-box-orient: vertical;
     line-height: 1.4;
+}
+.project-card:hover p{
+    -webkit-line-clamp: unset;   /* يشيل حد الـ 4 سطور */
+    overflow: visible;
+    height: auto;                 /* يخلي النص ياخد المساحة اللي يحتاجها */
 }
 .project-card:hover .btn{
     border: 2px solid white;
