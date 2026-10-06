@@ -246,8 +246,10 @@ section{
     }
     .about-me-quote,
     .contact-me-quote{
-        font-size: 5rem;
+        font-size: 2rem;
         margin-bottom: -1.2rem;
+        left: -1rem;
+        top: 0rem;  
     }
     .about-me-lead{
         font-size: 1.5rem;
