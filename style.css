@@ -865,3 +865,35 @@ footer ul li a{
         gap:1rem;
     }
 }
+@media (max-width: 768px) {
+    .experience-info{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .experience img{
+        width: 60vw;
+        max-width: 280px;
+    }
+    .grid{
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .section-title{
+        font-size: 2.5rem;
+    }
+    .grid-card{
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .experience img{
+        width: 70vw;
+    }
+    .grid-card{
+        padding: 1.5rem;
+    }
+    .grid-card span{
+        font-size: 1.2rem;
+    }
+}
