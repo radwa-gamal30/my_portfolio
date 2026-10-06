@@ -107,7 +107,7 @@ header.scrolled {
 .about-container > img {
     animation:
         zoomIn 1s ease 0.2s backwards,
-        float 6s ease-in-out 1.2s infinite,
+        float 0s ease-in-out 1.2s infinite,
         glow 4s ease-in-out infinite alternate;
 }
 .info-box .text h3   { animation: fadeUp 0.8s ease 0.35s backwards; }
