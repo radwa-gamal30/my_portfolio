@@ -127,21 +127,6 @@ header.scrolled {
     animation: blink 0.9s steps(1) infinite;
 }
 
-/* ---------- Scroll reveal (classes are added by script.js) ---------- */
-.reveal {
-    opacity: 0;
-}
-/* "backwards" fill: the element sits hidden during its delay, and once the
-   animation ends the normal styles (hover transforms etc.) take over again */
-.reveal.show {
-    opacity: 1;
-    animation: fadeUp 0.8s ease backwards;
-    animation-delay: var(--d, 0s);
-}
-.reveal.from-right.show {
-    animation-name: fadeRight;
-}
-
 /* ---------- Small hover / micro interactions ---------- */
 .grid-card:hover i {
     animation: iconWiggle 0.6s ease;
@@ -170,7 +155,99 @@ header.scrolled {
         transition: none !important;
         scroll-behavior: auto !important;
     }
-    .reveal {
+    .reveal,
+    .reveal-fade,
+    .reveal-left,
+    .reveal-right,
+    .reveal-scale {
         opacity: 1;
+        transform: none;
+        filter: none;
     }
 }
+
+/* ---------- Scroll reveal (classes are added by script.js) ----------
+   One system only: base state is hidden/offset/blurred, the ".active"
+   class (added once, when the element scrolls into view) animates it in.
+   --d is an optional per-element stagger delay set inline by script.js. */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(4px);
+    transition:
+        opacity 1.1s cubic-bezier(0.25, 0.1, 0.25, 1),
+        transform 1.1s cubic-bezier(0.25, 0.1, 0.25, 1),
+        filter 1.1s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition-delay: var(--d, 0s);
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+
+.reveal-fade {
+    opacity: 0;
+    transition: opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition-delay: var(--d, 0s);
+}
+.reveal-fade.active {
+    opacity: 1;
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    filter: blur(3px);
+    transition:
+        opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 1s cubic-bezier(0.16, 1, 0.3, 1),
+        filter 1s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: var(--d, 0s);
+}
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(40px);
+    filter: blur(3px);
+    transition:
+        opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 1s cubic-bezier(0.16, 1, 0.3, 1),
+        filter 1s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: var(--d, 0s);
+}
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+}
+
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.94) translateY(15px);
+    filter: blur(3px);
+    transition:
+        opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 1s cubic-bezier(0.16, 1, 0.3, 1),
+        filter 1s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: var(--d, 0s);
+}
+.reveal-scale.active {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+}
+
+/* Optional fixed stagger delays, for any element you tag by hand in the HTML
+   instead of relying on script.js's automatic --d stagger. */
+.reveal-delay-1 { transition-delay: 0.12s; }
+.reveal-delay-2 { transition-delay: 0.24s; }
+.reveal-delay-3 { transition-delay: 0.36s; }
+.reveal-delay-4 { transition-delay: 0.48s; }
+.reveal-delay-5 { transition-delay: 0.6s; }
+.reveal-delay-6 { transition-delay: 0.72s; }

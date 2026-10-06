@@ -136,11 +136,11 @@ const spy = new IntersectionObserver((entries) => {
 }, { rootMargin: '-40% 0px -55% 0px' });
 sections.forEach((section) => spy.observe(section));
 
-/* ========== Reveal on scroll ========== */
+/* ========== Reveal on scroll ==========
+   Single observer, single CSS system (.reveal / .reveal-right + .active,
+   defined in animations.css). Each element gets exactly one reveal class
+   and animates in once. */
 if (!reduceMotion) {
-    // const targets = document.querySelectorAll(
-    //     '.section-title, .grid-card, .project-card, .experience-info > img, #contact-form, .about-me-card'
-    // );
     const targets = document.querySelectorAll(
         '.section-title, .grid-card, .project-card, .experience-info > img, #contact-form, .about-me-quote, .about-me-lead, .about-me-text, .cta-lead, .cta-btn-link'
     );
@@ -148,18 +148,21 @@ if (!reduceMotion) {
     const reveal = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('show');
+                entry.target.classList.add('active');
                 observer.unobserve(entry.target); // animate once
             }
         });
-    }, { threshold: 0.15 });
+    }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -80px 0px',
+    });
 
     targets.forEach((el) => {
-        el.classList.add('reveal');
-        if (el.matches('.experience-info > img')) el.classList.add('from-right');
+        const revealClass = el.matches('.experience-info > img') ? 'reveal-right' : 'reveal';
+        el.classList.add(revealClass);
 
         // small stagger between siblings (cards inside the same grid)
-        const siblings = el.parentElement.querySelectorAll(`:scope > .${el.classList[0]}`);
+        const siblings = el.parentElement.querySelectorAll(`:scope > .${revealClass}`);
         const index = Array.prototype.indexOf.call(siblings, el);
         el.style.setProperty('--d', `${Math.max(index, 0) * 0.12}s`);
 
